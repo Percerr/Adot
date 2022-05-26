@@ -6,7 +6,7 @@ const createUserToken = async(user, req, res) => {
     const token = jwt.sign({
         name: user.name,
         id:user._id
-    }, "nossosecret")
+    }, "segredoifsp")
 
     //return do token para pegar na front
     res.status(200).json({
