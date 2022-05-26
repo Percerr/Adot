@@ -136,7 +136,11 @@ static async login(req, res) {
     static async getUserById(req, res){
 
         const id = req.params.id
+<<<<<<< HEAD
         const user = await User.findById(id).select('-password') // .select para não exibir o password
+=======
+        const user = await User.findById(id)
+>>>>>>> f83522a0d7f7ff35fea1a04467cc7ffa39a50ebe
 
         if (!user) {
             res.status(422).json({
