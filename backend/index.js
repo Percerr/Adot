@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
-
+const port = process.env.PORT || 5001;
 //config JSON response
 app.use(express.json())
 
@@ -19,8 +19,10 @@ const PetRoutes = require('./routes/PetRoutes')
 app.use('/users', UserRoutes)
 app.use('/pets', PetRoutes)
 
-app.listen(5000)
+app.listen(port)
 
+//res.send("teste")
 
 //token githhubbb
 //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
+//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
